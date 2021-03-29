@@ -6,7 +6,7 @@ function App() {
         <div className="App">
             <Container fluid>
                 <Row>
-                    <Col className={'text-center h1 mt-5'}>willdo</Col>
+                    <Col className={'text-center h1 mt-5'}>willdoo</Col>
                 </Row>
             </Container>
         </div>
