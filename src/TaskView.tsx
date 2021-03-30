@@ -1,5 +1,5 @@
 import React from 'react';
-import {Badge, Button, Col, Row} from 'react-bootstrap'
+import { Button, Col, Row} from 'react-bootstrap'
 import ITask from "./ITask";
 import {runInAction} from "mobx";
 import {observer} from "mobx-react";
