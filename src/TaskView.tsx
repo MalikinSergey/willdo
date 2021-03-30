@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Col, Row} from 'react-bootstrap'
+import {Button, Col, Row} from 'react-bootstrap'
 import ITask from "./ITask";
 import {runInAction} from "mobx";
 import {observer} from "mobx-react";
@@ -8,18 +8,16 @@ interface ITaskComponentProps {
     task: ITask
 }
 
-export const TaskView: React.FC<ITaskComponentProps> = observer(({task}:ITaskComponentProps) => {
+export const TaskView: React.FC<ITaskComponentProps> = observer(({task}: ITaskComponentProps) => {
 
-    const changeTaskStatus = (task:ITask) => {
+    const changeTaskStatus = (task: ITask) => {
 
 
-    console.log(task.status)
         runInAction(() => {
 
-            if(task.status === 'hold'){
+            if (task.status === 'hold') {
                 task.status = 'active'
-            }
-            else{
+            } else {
                 task.status = 'hold'
             }
 
@@ -35,7 +33,11 @@ export const TaskView: React.FC<ITaskComponentProps> = observer(({task}:ITaskCom
             </Col>
 
             <Col md={2}>
-                <Button size="sm" onClick={() => {changeTaskStatus(task)}} variant={task.status === 'active' ?  'success' : 'warning'}>{task.status}</Button>
+                <Button
+                    size="sm" onClick={() => {
+                    changeTaskStatus(task)
+                }} variant={task.status === 'active' ? 'success' : 'warning'}
+                >{task.status}</Button>
             </Col>
         </Row>
 

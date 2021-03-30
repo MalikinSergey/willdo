@@ -3,7 +3,6 @@ import {Button, Col, FormControl, Row} from 'react-bootstrap'
 import ITask from "./ITask";
 import {TaskStore} from "./TaskStore";
 import {runInAction} from "mobx";
-import {observer} from "mobx-react";
 
 interface IAddTaskProps {
     store: TaskStore
